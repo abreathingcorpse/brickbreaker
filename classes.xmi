@@ -185,9 +185,14 @@
       <packagedElement xmi:type="uml:Class" xmi:id="uYJw4zmwdIFZE" name="GraphicsComponent"/>
       <packagedElement xmi:type="uml:Class" xmi:id="u7fHXSXL53xN6" name="time"/>
       <packagedElement xmi:type="uml:Class" xmi:id="uYE1iGYf2VriH" name="CircleShape"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="uYQalmHG6WR58" name="button">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="uITSlhxujRrt9" name="btnText" visibility="private" type="uaTfh8bHDOAw2"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="uirmXdYMIltm2" name="btnSprite" visibility="private" type="usawKISKV4ckO"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="uaTfh8bHDOAw2" name="text"/>
       <xmi:Extension extender="umbrello">
         <diagrams resolution="96">
-          <diagram xmi.id="uRr4QO2dX0Rcz" name="brick-breaker classes" type="1" documentation="" backgroundcolor="#ffffff" fillcolor="#ffffc0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" griddotcolor="#d3d3d3" linecolor="#990000" linewidth="0" textcolor="#000000" usefillcolor="1" showattribassocs="1" showatts="1" showattsig="1" showops="1" showopsig="1" showpackage="1" showpubliconly="0" showscope="1" showstereotype="2" localid="-1" showgrid="0" snapgrid="0" snapcsgrid="0" snapx="25" snapy="25" zoom="161" canvasheight="800" canvaswidth="1100" isopen="1">
+          <diagram xmi.id="uRr4QO2dX0Rcz" name="brick-breaker-game" type="1" documentation="" backgroundcolor="#ffffff" fillcolor="#ffffc0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" griddotcolor="#d3d3d3" linecolor="#990000" linewidth="0" textcolor="#000000" usefillcolor="1" showattribassocs="1" showatts="1" showattsig="1" showops="1" showopsig="1" showpackage="1" showpubliconly="0" showscope="1" showstereotype="2" localid="-1" showgrid="0" snapgrid="0" snapcsgrid="0" snapx="25" snapy="25" zoom="161" canvasheight="800" canvaswidth="1100" isopen="1">
             <widgets>
               <classwidget xmi.id="u8RsuEYaq2zdk" localid="uoO7yMMZ0D2Aq" textcolor="#000000" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" fillcolor="#ffffc0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" autoresize="1" x="544.332" y="222.201" width="295" height="256" isinstance="0" showstereotype="2" showoperations="1" showpubliconly="0" showopsigs="601" showpackage="1" showscope="1" showattributes="1" showattsigs="601"/>
               <classwidget xmi.id="uo6UU1OLh8DVN" localid="uYbJAEDUgtHaf" textcolor="#000000" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" fillcolor="#ffffc0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" autoresize="1" x="48.6642" y="55.68" width="189" height="304" isinstance="0" showstereotype="2" showoperations="1" showpubliconly="0" showopsigs="601" showpackage="1" showscope="1" showattributes="1" showattsigs="601"/>
@@ -198,10 +203,17 @@
             <messages/>
             <associations/>
           </diagram>
-          <diagram xmi.id="uHF3Fsj9loa44" name="brick-breaker components" type="1" documentation="" backgroundcolor="#ffffff" fillcolor="#ffffc0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" griddotcolor="#d3d3d3" linecolor="#990000" linewidth="0" textcolor="#000000" usefillcolor="1" showattribassocs="1" showatts="1" showattsig="1" showops="1" showopsig="1" showpackage="1" showpubliconly="0" showscope="1" showstereotype="2" localid="-1" showgrid="0" snapgrid="0" snapcsgrid="0" snapx="25" snapy="25" zoom="112" canvasheight="800" canvaswidth="1100" isopen="1">
+          <diagram xmi.id="uHF3Fsj9loa44" name="brick-breaker-components" type="1" documentation="" backgroundcolor="#ffffff" fillcolor="#ffffc0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" griddotcolor="#d3d3d3" linecolor="#990000" linewidth="0" textcolor="#000000" usefillcolor="1" showattribassocs="1" showatts="1" showattsig="1" showops="1" showopsig="1" showpackage="1" showpubliconly="0" showscope="1" showstereotype="2" localid="-1" showgrid="0" snapgrid="0" snapcsgrid="0" snapx="25" snapy="25" zoom="112" canvasheight="800" canvaswidth="1100" isopen="1">
             <widgets>
               <classwidget xmi.id="uXHkna0u8QSY2" localid="u0ewR2R9E1cjA" textcolor="#000000" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" fillcolor="#ffffc0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" autoresize="1" x="61.6071" y="114.286" width="142" height="32" isinstance="0" showstereotype="2" showoperations="1" showpubliconly="0" showopsigs="601" showpackage="1" showscope="1" showattributes="1" showattsigs="601"/>
               <classwidget xmi.id="uYJw4zmwdIFZE" localid="ucxHSjOkO0SFv" textcolor="#000000" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" fillcolor="#ffffc0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" autoresize="1" x="350.893" y="113.393" width="133" height="32" isinstance="0" showstereotype="2" showoperations="1" showpubliconly="0" showopsigs="601" showpackage="1" showscope="1" showattributes="1" showattsigs="601"/>
+            </widgets>
+            <messages/>
+            <associations/>
+          </diagram>
+          <diagram xmi.id="ufGlhgPiIzN4Y" name="main-menu" type="1" documentation="" backgroundcolor="#ffffff" fillcolor="#ffffc0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" griddotcolor="#d3d3d3" linecolor="#990000" linewidth="0" textcolor="#000000" usefillcolor="1" showattribassocs="1" showatts="1" showattsig="1" showops="1" showopsig="1" showpackage="1" showpubliconly="0" showscope="1" showstereotype="2" localid="-1" showgrid="0" snapgrid="0" snapcsgrid="0" snapx="25" snapy="25" zoom="152.087" canvasheight="800" canvaswidth="1100" isopen="1">
+            <widgets>
+              <classwidget xmi.id="uYQalmHG6WR58" localid="u1GuzzJO3P52p" textcolor="#000000" linecolor="#990000" linewidth="0" usefillcolor="1" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" fillcolor="#ffffc0" font="Sans Serif,9,-1,5,50,0,0,0,0,0" autoresize="1" x="25" y="143" width="170" height="56" isinstance="0" showstereotype="2" showoperations="1" showpubliconly="0" showopsigs="601" showpackage="1" showscope="1" showattributes="1" showattsigs="601"/>
             </widgets>
             <messages/>
             <associations/>
@@ -218,7 +230,7 @@
     <packagedElement xmi:type="uml:Model" xmi:id="Entity_Relationship_Model" name="Entity Relationship Model"/>
   </uml:Model>
   <xmi:Extension extender="umbrello">
-    <docsettings viewid="uRr4QO2dX0Rcz" documentation="" uniqueid="uC9dNu0yUVEel"/>
+    <docsettings viewid="ufGlhgPiIzN4Y" documentation="" uniqueid="uirmXdYMIltm2"/>
     <listview>
       <listitem id="Views" type="800" open="1">
         <listitem id="Component_View" type="821" open="1">
@@ -228,7 +240,7 @@
         <listitem id="Deployment_View" type="827" open="1"/>
         <listitem id="Entity_Relationship_Model" type="836" open="1"/>
         <listitem id="Logical_View" type="801" open="1">
-          <listitem id="uDga3QdMAIZ0R" type="813" open="1">
+          <listitem id="uDga3QdMAIZ0R" type="813" open="0">
             <listitem id="uzJGDnZ1SiaLE" type="815" open="0"/>
             <listitem id="uMqbFgeaBcr5r" type="815" open="0"/>
             <listitem id="uzEeJXtn6AJi0" type="815" open="0"/>
@@ -266,9 +278,13 @@
             <listitem id="uudEYIk0rZpgi" type="814" open="0"/>
             <listitem id="u8Al72xU8irCG" type="814" open="0"/>
           </listitem>
-          <listitem id="uRr4QO2dX0Rcz" type="807" label="brick-breaker classes" open="0"/>
-          <listitem id="uHF3Fsj9loa44" type="807" label="brick-breaker components" open="0"/>
+          <listitem id="uHF3Fsj9loa44" type="807" label="brick-breaker-components" open="0"/>
+          <listitem id="uRr4QO2dX0Rcz" type="807" label="brick-breaker-game" open="0"/>
           <listitem id="uPLQPV3zWrLKZ" type="813" open="1"/>
+          <listitem id="uYQalmHG6WR58" type="813" open="1">
+            <listitem id="uirmXdYMIltm2" type="814" open="0"/>
+            <listitem id="uITSlhxujRrt9" type="814" open="0"/>
+          </listitem>
           <listitem id="uYE1iGYf2VriH" type="813" open="1"/>
           <listitem id="Datatypes" type="830" open="0">
             <listitem id="uo3MbjPtgxHJ6" type="829" open="0"/>
@@ -291,7 +307,8 @@
             <listitem id="uJTBbBQgzW3Ie" type="829" open="0"/>
           </listitem>
           <listitem id="uYJw4zmwdIFZE" type="813" open="1"/>
-          <listitem id="u8RsuEYaq2zdk" type="813" open="1">
+          <listitem id="ufGlhgPiIzN4Y" type="807" label="main-menu" open="0"/>
+          <listitem id="u8RsuEYaq2zdk" type="813" open="0">
             <listitem id="u6qdqLGV02yho" type="815" open="0"/>
             <listitem id="uOVtOVNEic0hy" type="815" open="1"/>
             <listitem id="uiwiRuKUNA7Nk" type="815" open="1"/>
@@ -310,6 +327,7 @@
           </listitem>
           <listitem id="usawKISKV4ckO" type="813" open="1"/>
           <listitem id="u4kSmmlfRf7Qv" type="813" open="1"/>
+          <listitem id="uaTfh8bHDOAw2" type="813" open="1"/>
           <listitem id="u7fHXSXL53xN6" type="813" open="1"/>
           <listitem id="uXHkna0u8QSY2" type="813" open="1"/>
           <listitem id="uFAnrSmGUdaPT" type="813" open="0">
@@ -320,7 +338,7 @@
             <listitem id="uyu1KC4SsfA2a" type="815" open="0"/>
           </listitem>
           <listitem id="uLvgy6q7wIbxX" type="813" open="1"/>
-          <listitem id="u9vwcR1fkerMt" type="813" open="1">
+          <listitem id="u9vwcR1fkerMt" type="813" open="0">
             <listitem id="ugqzJewEVb1sK" type="815" open="1"/>
             <listitem id="ujEj7ZIx5CXCk" type="815" open="0"/>
             <listitem id="u5f9EZuVvbh6W" type="815" open="1"/>
