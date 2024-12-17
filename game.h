@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "ball.h"
 #include "mainmenuScreen.h"
+#include "screenManager.h"
 
 enum ScreenState {
     MAIN_MENU,
@@ -25,5 +26,5 @@ class Game {
         sf::RenderWindow mWindow;
         Ball mBall;
         ScreenState screenState;
-        MainMenuScreen mMainMenuScreen; // TODO: ScreenManager should do this
+        ScreenManager mScreenManager;
 };

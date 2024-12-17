@@ -23,7 +23,7 @@ void Game::render() {
 
     switch (screenState) {
         case MAIN_MENU: {
-            mWindow.draw(mMainMenuScreen);
+            mWindow.draw(mScreenManager.getMainMenuScreen());
             break;
         }
         case EXIT_GAME: {
