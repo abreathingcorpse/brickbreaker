@@ -1,6 +1,5 @@
 #include "ball.h"
 
-//Game::Game() : mWindow(sf::VideoMode(1920,1080),"brickbreaker") {}
 Ball::Ball() : mSprite(10.f) {};
 
 const float& Ball::getRadius() const {

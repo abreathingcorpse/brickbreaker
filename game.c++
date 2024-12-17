@@ -1,13 +1,16 @@
 #include "game.h"
+#include <iostream>
 
-Game::Game() : mWindow(sf::VideoMode(1920,1080),"brickbreaker") {}
+Game::Game() : mWindow(sf::VideoMode(1920,1080),"brickbreaker") {
+    screenState = MAIN_MENU; 
+}
 
 void Game::processEvents() {
     sf::Event event;
 
     while (mWindow.pollEvent(event)) {
         if (event.type == sf::Event::Closed)
-            mWindow.close();
+            screenState = EXIT_GAME;
     }
 }
 
@@ -17,7 +20,35 @@ void Game::update(sf::Time deltaTime) {
 
 void Game::render() {
     mWindow.clear();
-    mWindow.draw(mBall.getCircleShape());
+
+    switch (screenState) {
+        case MAIN_MENU: {
+            mWindow.draw(mMainMenuScreen);
+            break;
+        }
+        case EXIT_GAME: {
+            std::cout << "Good Bye!" << std::endl;
+            mWindow.close();
+            break;
+        }
+        case STAGE_SELECTOR: {
+            break;
+        }
+        case MODS_SELECTOR: {
+            break;
+        }
+        case GAME_LOOP: {
+            mWindow.draw(mBall.getCircleShape());
+            break;
+        }
+        case GAME_PAUSED: {
+            break;
+        }
+        case GAME_OVER: {
+            break;
+        }
+    }
+
     mWindow.display();
 }
 
