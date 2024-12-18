@@ -1,11 +1,17 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <string>
+#include "component.h"
 
-class ButtonText {
+class ButtonTextComponent : public Component {
     public:
-        // Constructors
-        ButtonText();
+        // Constructor & Destructor
+        ButtonTextComponent();
+        ~ButtonTextComponent();
+
+        // Need to override this from the parent interface
+        void update(sf::Time deltaTime) override;
+        void render() override;
 
         // Setters & getters
         const sf::RectangleShape& getRectangleShape() const;

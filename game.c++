@@ -29,6 +29,7 @@ void Game::render() {
         case EXIT_GAME: {
             std::cout << "Good Bye!" << std::endl;
             mWindow.close();
+            std::cout << "After Close" << std::endl;
             break;
         }
         case STAGE_SELECTOR: {
@@ -57,7 +58,7 @@ void Game::run() {
     sf::Time elapsedTime;
     const sf::Time framerate = sf::seconds(1.f/60);
 
-        while(mWindow.isOpen()){
+    while(mWindow.isOpen()){
         elapsedTime += clock.restart();
 
         while (elapsedTime > framerate) {
@@ -65,6 +66,7 @@ void Game::run() {
             processEvents();
             update(elapsedTime);
         }
+
         render();
     }
 }

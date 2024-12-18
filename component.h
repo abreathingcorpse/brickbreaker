@@ -6,6 +6,8 @@ class Component {
     public:
         // Virtual destructor, since it's a parent
         virtual ~Component();
+
+        // Methods overriden by the Components
         virtual void update(sf::Time deltaTime) = 0;
         virtual void render() = 0;
 };
