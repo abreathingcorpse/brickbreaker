@@ -3,7 +3,7 @@
 
 class ScreenManager {
     public:
-        const MainMenuScreen& getMainMenuScreen() const;
+        MainMenuScreen& getMainMenuScreen();
         void setMainMenuScreen(MainMenuScreen mainmenu);
 
     private:

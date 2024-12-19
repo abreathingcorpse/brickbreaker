@@ -14,8 +14,8 @@ ButtonTextComponent::~ButtonTextComponent() {
 void ButtonTextComponent::update(sf::Time deltaTime) {
     std::cout << "ButtonTextComponent update()" << std::endl;
 }
-void ButtonTextComponent::render() {
-    std::cout << "ButtonTextComponent render()" << std::endl;
+void ButtonTextComponent::render(sf::RenderWindow& window) {
+    window.draw(mButtonSprite);
 }
 
 const sf::RectangleShape& ButtonTextComponent::getRectangleShape() const {

@@ -1,3 +1,6 @@
 # Compiled Object files and executables
 *.o
 *.out
+
+# For debugging
+breakpoints

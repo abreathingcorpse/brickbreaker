@@ -2,7 +2,6 @@
 #include "component.h"
 
 Entity::Entity() {
-    mpComponents.resize(2);
 }
 
 void Entity::create() {
@@ -20,16 +19,14 @@ void Entity::update(sf::Time deltaTime) {
     }
 }
 
-void Entity::render() {
+void Entity::render(sf::RenderWindow& window) {
     for(std::shared_ptr<Component> component : mpComponents) {
-        component->render();
+        component->render(window);
     }
 }
 
 void Entity::addComponent(std::shared_ptr<Component> component) {
-    std::cout << "Enters Entity.addComponent()" << std::endl;
     mpComponents.push_back(component);
-    std::cout << "Leaving Entity.addComponent()" << std::endl;
 }
 
 void Entity::removeComponent(std::shared_ptr<Component> component) {

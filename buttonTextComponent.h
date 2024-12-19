@@ -1,6 +1,5 @@
 #pragma once
-#include <SFML/Graphics.hpp>
-#include <string>
+#include "commonIncludes.h"
 #include "component.h"
 
 class ButtonTextComponent : public Component {
@@ -11,7 +10,7 @@ class ButtonTextComponent : public Component {
 
         // Need to override this from the parent interface
         void update(sf::Time deltaTime) override;
-        void render() override;
+        void render(sf::RenderWindow& window) override;
 
         // Setters & getters
         const sf::RectangleShape& getRectangleShape() const;

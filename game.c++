@@ -18,18 +18,18 @@ void Game::update(sf::Time deltaTime) {
     // The update methods will be called here
 }
 
-void Game::render() {
+void Game::render(sf::RenderWindow& mWindow) {
     mWindow.clear();
 
     switch (screenState) {
         case MAIN_MENU: {
-            mWindow.draw(mScreenManager.getMainMenuScreen());
+            mScreenManager.getMainMenuScreen().render(mWindow);
+//            mWindow.draw(mScreenManager.getMainMenuScreen());
             break;
         }
         case EXIT_GAME: {
             std::cout << "Good Bye!" << std::endl;
             mWindow.close();
-            std::cout << "After Close" << std::endl;
             break;
         }
         case STAGE_SELECTOR: {
@@ -67,6 +67,6 @@ void Game::run() {
             update(elapsedTime);
         }
 
-        render();
+        render(mWindow);
     }
 }

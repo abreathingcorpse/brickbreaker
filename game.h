@@ -20,7 +20,7 @@ class Game {
         void run();
         void processEvents();
         void update(sf::Time deltaTime);
-        void render();
+        void render(sf::RenderWindow& window);
 
     private:
         sf::RenderWindow mWindow;

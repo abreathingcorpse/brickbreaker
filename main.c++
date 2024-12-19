@@ -3,7 +3,6 @@
 
 int main() {
     Game game;
-    std::cout << "Before run" << std::endl;
     game.run();
 
     return 0;

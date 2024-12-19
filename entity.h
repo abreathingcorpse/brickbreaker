@@ -7,14 +7,11 @@ class Component;
 class Entity {
     public:
         Entity();
-//        virtual ~Entity(); Commented out, since it's not a parent
 
         virtual void update(sf::Time deltaTime);
-        virtual void render();
+        virtual void render(sf::RenderWindow& window);
         void create();
         void destroy();
-//        void update(sf::Time deltaTime);
-//        void render();
         void addComponent(std::shared_ptr<Component> component);
         void removeComponent(std::shared_ptr<Component> component);
 

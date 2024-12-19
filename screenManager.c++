@@ -1,6 +1,6 @@
 #include "screenManager.h"
 
-const MainMenuScreen& ScreenManager::getMainMenuScreen() const {
+MainMenuScreen& ScreenManager::getMainMenuScreen() {
     return mMainMenuScreen;
 }
 void ScreenManager::setMainMenuScreen(MainMenuScreen mainmenu) {

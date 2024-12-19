@@ -9,5 +9,5 @@ class Component {
 
         // Methods overriden by the Components
         virtual void update(sf::Time deltaTime) = 0;
-        virtual void render() = 0;
+        virtual void render(sf::RenderWindow& window) = 0;
 };
