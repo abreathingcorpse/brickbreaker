@@ -24,6 +24,7 @@ class Game {
 
     private:
         sf::RenderWindow mWindow;
+        sf::Time mElapsedTime;
         Ball mBall;
         ScreenState screenState;
         ScreenManager mScreenManager;

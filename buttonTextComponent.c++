@@ -23,7 +23,7 @@ ButtonTextComponent::~ButtonTextComponent() {
 
 // Need to implement the following couple of functions from the Component interface
 void ButtonTextComponent::update(sf::Time deltaTime) {
-    std::cout << "ButtonTextComponent update()" << std::endl;
+//    std::cout << "ButtonTextComponent update()" << std::endl;
 }
 void ButtonTextComponent::render(sf::RenderWindow& window, sf::Transform transform) {
     window.draw(mButtonSprite, transform); 

@@ -15,7 +15,33 @@ void Game::processEvents() {
 }
 
 void Game::update(sf::Time deltaTime) {
-    // The update methods will be called here
+    switch (screenState) {
+        case MAIN_MENU: {
+            mScreenManager.getMainMenuScreen().update(mElapsedTime);
+            break;
+        }
+        case EXIT_GAME: {
+            std::cout << "Good Bye!" << std::endl;
+            mWindow.close();
+            break;
+        }
+        case STAGE_SELECTOR: {
+            break;
+        }
+        case MODS_SELECTOR: {
+            break;
+        }
+        case GAME_LOOP: {
+//            mWindow.draw(mBall.getCircleShape());
+            break;
+        }
+        case GAME_PAUSED: {
+            break;
+        }
+        case GAME_OVER: {
+            break;
+        }
+    }
 }
 
 void Game::render(sf::RenderWindow& mWindow) {
@@ -24,7 +50,6 @@ void Game::render(sf::RenderWindow& mWindow) {
     switch (screenState) {
         case MAIN_MENU: {
             mScreenManager.getMainMenuScreen().render(mWindow);
-//            mWindow.draw(mScreenManager.getMainMenuScreen());
             break;
         }
         case EXIT_GAME: {
@@ -55,16 +80,16 @@ void Game::render(sf::RenderWindow& mWindow) {
 
 void Game::run() {
     sf::Clock clock;
-    sf::Time elapsedTime;
+    mElapsedTime = sf::Time::Zero;
     const sf::Time framerate = sf::seconds(1.f/60);
 
     while(mWindow.isOpen()){
-        elapsedTime += clock.restart();
+        mElapsedTime += clock.restart();
 
-        while (elapsedTime > framerate) {
-            elapsedTime -= framerate;
+        while (mElapsedTime > framerate) {
+            mElapsedTime -= framerate;
             processEvents();
-            update(elapsedTime);
+            update(mElapsedTime);
         }
 
         render(mWindow);

@@ -23,9 +23,7 @@ class Entity {
         void removeComponent(std::string component_type);
 
         std::shared_ptr<Component> getComponent(const ComponentTypes component_type);
-//        void removeComponent(std::shared_ptr<Component> component);
 
     private:
         std::map<std::string, std::shared_ptr<Component>> mComponents;
-//        std::vector<std::shared_ptr<Component>> mpComponents;
 };

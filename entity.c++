@@ -37,20 +37,10 @@ void Entity::render(sf::RenderWindow& window) {
 
 void Entity::addComponent(std::string component_type, std::shared_ptr<Component> component) {
     mComponents.insert({component_type, component});
-//    mpComponents.push_back(component);
 }
 
 void Entity::removeComponent(std::string component_type) {
     mComponents.erase(component_type);
-//void Entity::removeComponent(std::shared_ptr<Component> component) {
-//    if(std::find(mComponents.begin(), mComponents.end(), component)
-//        == mComponents.end()) {
-//        std::cerr << "Attempted to remove component which does not" << 
-//        " belong to entity" << std::endl;
-//    } else {
-//        mComponents.erase(std::find(mComponents.begin(), mComponents.end(),
-//        component));
-//    }
 }
 
 std::shared_ptr<Component> Entity::getComponent(const ComponentTypes component_type) {

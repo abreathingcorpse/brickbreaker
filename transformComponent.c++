@@ -2,7 +2,7 @@
 
 // Need to implement the following couple of functions from the Component interface
 void TransformComponent::update(sf::Time deltaTime) {
-    std::cout << "TransformComponent update()" << std::endl;
+//    std::cout << "TransformComponent update()" << std::endl;
 }
 void TransformComponent::render(sf::RenderWindow& window, sf::Transform transform) {
     // Doesn't make sense to render a Transformable
