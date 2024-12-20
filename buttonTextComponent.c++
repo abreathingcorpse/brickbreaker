@@ -14,7 +14,6 @@ ButtonTextComponent::ButtonTextComponent(std::string text) : mButtonSprite(), mF
     sf::Vector2f textSize = textBoundingBox.getSize();
     mButtonSprite.setSize(textSize + sf::Vector2f(5.f,5.f));
     mButtonSprite.setFillColor(sf::Color::Blue);
-
 }
 
 ButtonTextComponent::~ButtonTextComponent() {
@@ -23,11 +22,16 @@ ButtonTextComponent::~ButtonTextComponent() {
 
 // Need to implement the following couple of functions from the Component interface
 void ButtonTextComponent::update(sf::Time deltaTime) {
-//    std::cout << "ButtonTextComponent update()" << std::endl;
+//    sf::FloatRect playButtonBoundingBox = mButtonSprite.getLocalBounds();
+//    playButtonBoundingBox.contains() // TODO give mouse position
+//    std::cout << "PlayButton local bounds: " << std::endl;
 }
 void ButtonTextComponent::render(sf::RenderWindow& window, sf::Transform transform) {
-    window.draw(mButtonSprite, transform); 
-    window.draw(mText, transform); 
+//    sf::Vector2f buttonSize = mButtonSprite.getSize();
+//    std::cout << "button size: " << buttonSize.x << std::endl;
+//    window.draw(mButtonSprite, transform); 
+    window.draw(mButtonSprite/*, transform*/); 
+//    window.draw(mText, transform); 
 }
 
 const sf::RectangleShape& ButtonTextComponent::getRectangleShape() const {

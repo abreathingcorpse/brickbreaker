@@ -4,3 +4,9 @@
 #include <iostream>
 #include <algorithm> // Required for std::find()
 #include <memory> // std::shared_ptr
+
+enum ComponentTypes {
+    BUTTON_TEXT_COMPONENT,
+    TRANSFORM_COMPONENT,
+    MOUSE_COMPONENT
+};

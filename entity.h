@@ -6,11 +6,6 @@
 // Forward declaration
 class Component;
 
-enum ComponentTypes {
-    BUTTON_TEXT_COMPONENT,
-    TRANSFORM_COMPONENT
-};
-
 class Entity {
     public:
         Entity();
@@ -19,11 +14,13 @@ class Entity {
         virtual void render(sf::RenderWindow& window);
         void create();
         void destroy();
-        void addComponent(std::string component_type, std::shared_ptr<Component> component);
-        void removeComponent(std::string component_type);
+        void addComponent(const ComponentTypes& component_type, std::shared_ptr<Component> component);
+//        void addComponent(std::string component_type, std::shared_ptr<Component> component);
+        void removeComponent(const ComponentTypes& component_type);
 
-        std::shared_ptr<Component> getComponent(const ComponentTypes component_type);
+        std::shared_ptr<Component> getComponent(const ComponentTypes& component_type);
 
     private:
-        std::map<std::string, std::shared_ptr<Component>> mComponents;
+//        std::map<std::string, std::shared_ptr<Component>> mComponents;
+        std::map<ComponentTypes, std::shared_ptr<Component>> mComponents;
 };
