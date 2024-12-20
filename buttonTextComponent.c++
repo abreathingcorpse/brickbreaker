@@ -1,10 +1,20 @@
 #include "commonIncludes.h" 
 #include "buttonTextComponent.h"
 
-ButtonTextComponent::ButtonTextComponent() : mButtonSprite(sf::Vector2f(10.f,10.f)), mFont() {
-    std::cout << "Constructor ButtonTextComponent()" << std::endl;
-
+ButtonTextComponent::ButtonTextComponent(std::string text) : mButtonSprite(), mFont() {
+    // Font
     loadFont("NotoSans-Regular.ttf");
+
+    // Text
+    mText.setFont(mFont);
+    mText.setString(text);
+
+    // Button
+    sf::FloatRect textBoundingBox = mText.getLocalBounds();
+    sf::Vector2f textSize = textBoundingBox.getSize();
+    mButtonSprite.setSize(textSize + sf::Vector2f(5.f,5.f));
+    mButtonSprite.setFillColor(sf::Color::Blue);
+
 }
 
 ButtonTextComponent::~ButtonTextComponent() {
@@ -16,7 +26,8 @@ void ButtonTextComponent::update(sf::Time deltaTime) {
     std::cout << "ButtonTextComponent update()" << std::endl;
 }
 void ButtonTextComponent::render(sf::RenderWindow& window, sf::Transform transform) {
-    window.draw(mButtonSprite, transform); // TODO pass TransformComponent
+    window.draw(mButtonSprite, transform); 
+    window.draw(mText, transform); 
 }
 
 const sf::RectangleShape& ButtonTextComponent::getRectangleShape() const {

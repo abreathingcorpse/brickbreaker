@@ -5,7 +5,7 @@
 class ButtonTextComponent : public Component {
     public:
         // Constructor & Destructor
-        ButtonTextComponent();
+        ButtonTextComponent(std::string text);
         ~ButtonTextComponent();
 
         // Need to override this from the parent interface
