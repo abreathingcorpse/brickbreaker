@@ -3,6 +3,7 @@
 
 ButtonTextComponent::ButtonTextComponent() : mButtonSprite(sf::Vector2f(10.f,10.f)), mFont() {
     std::cout << "Constructor ButtonTextComponent()" << std::endl;
+
     loadFont("NotoSans-Regular.ttf");
 }
 
@@ -14,8 +15,8 @@ ButtonTextComponent::~ButtonTextComponent() {
 void ButtonTextComponent::update(sf::Time deltaTime) {
     std::cout << "ButtonTextComponent update()" << std::endl;
 }
-void ButtonTextComponent::render(sf::RenderWindow& window) {
-    window.draw(mButtonSprite);
+void ButtonTextComponent::render(sf::RenderWindow& window, sf::Transform transform) {
+    window.draw(mButtonSprite, transform); // TODO pass TransformComponent
 }
 
 const sf::RectangleShape& ButtonTextComponent::getRectangleShape() const {
@@ -38,21 +39,9 @@ const sf::Text& ButtonTextComponent::getText() const {
 void ButtonTextComponent::setText(sf::Text& text) {
     mText = text;
 }
-const sf::Transformable& ButtonTextComponent::getTransform() const {
-    return mTransform;
-}
-void ButtonTextComponent::setTransform(sf::Transformable& transform) {
-    mTransform = transform;
-}
 
 void ButtonTextComponent::loadFont(std::string fontName) {
     if(!mFont.loadFromFile("resources/fonts/"+fontName)) {
         std::cerr << fontName << " could not be loaded." << std::endl;
     }
-}
-const sf::Vector2f ButtonTextComponent::getPosition() const {
-    return mTransform.getPosition();
-}
-void ButtonTextComponent::setPosition(const sf::Vector2f &position) {
-    mTransform.setPosition(position);
 }

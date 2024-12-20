@@ -2,8 +2,13 @@
 
 MainMenuScreen::MainMenuScreen() {
     mpPlayButton = std::make_shared<Entity>();
+
     std::shared_ptr<ButtonTextComponent> pPlayButtonTextComponent = std::make_shared<ButtonTextComponent>();
-    mpPlayButton->addComponent(pPlayButtonTextComponent);
+    mpPlayButton->addComponent("ButtonTextComponent", pPlayButtonTextComponent);
+    
+    std::shared_ptr<TransformComponent> pPlayButtonTransformComponent = std::make_shared<TransformComponent>();
+    pPlayButtonTransformComponent->setPosition(sf::Vector2f(10.f,10.f));
+    mpPlayButton->addComponent("TransformComponent", pPlayButtonTransformComponent);
 }
 
 MainMenuScreen::~MainMenuScreen() {

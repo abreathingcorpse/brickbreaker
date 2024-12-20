@@ -1,8 +1,15 @@
 #pragma once
 #include "commonIncludes.h"
+#include <map>
+#include "transformComponent.h"
 
 // Forward declaration
 class Component;
+
+enum ComponentTypes {
+    BUTTON_TEXT_COMPONENT,
+    TRANSFORM_COMPONENT
+};
 
 class Entity {
     public:
@@ -12,9 +19,13 @@ class Entity {
         virtual void render(sf::RenderWindow& window);
         void create();
         void destroy();
-        void addComponent(std::shared_ptr<Component> component);
-        void removeComponent(std::shared_ptr<Component> component);
+        void addComponent(std::string component_type, std::shared_ptr<Component> component);
+        void removeComponent(std::string component_type);
+
+        std::shared_ptr<Component> getComponent(const ComponentTypes component_type);
+//        void removeComponent(std::shared_ptr<Component> component);
 
     private:
-        std::vector<std::shared_ptr<Component>> mpComponents;
+        std::map<std::string, std::shared_ptr<Component>> mComponents;
+//        std::vector<std::shared_ptr<Component>> mpComponents;
 };
