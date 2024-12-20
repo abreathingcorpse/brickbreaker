@@ -46,9 +46,14 @@ void Entity::removeComponent(const ComponentTypes& component_type) {
 
 std::shared_ptr<Component> Entity::getComponent(const ComponentTypes& component_type) {
 //    auto searchIterator = mComponents.find("TransformComponent");
-    auto searchIterator = mComponents.find(ComponentTypes::TRANSFORM_COMPONENT);
+    auto searchIterator = mComponents.find(component_type);
+    
 
     if (searchIterator != mComponents.end()) {
+        // For debugging
+        if (component_type == ComponentTypes::TRANSFORM_COMPONENT) {
+            std::shared_ptr<TransformComponent> transformComponent = std::reinterpret_pointer_cast<TransformComponent>(searchIterator->second);
+        }
         return searchIterator->second;
     } 
 

@@ -19,4 +19,5 @@ const sf::Vector2f TransformComponent::getPosition() const {
 }
 void TransformComponent::setPosition(const sf::Vector2f &position) {
     mTransform.setPosition(position);
+    std::cout << "Position set." << std::endl;
 }

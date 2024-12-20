@@ -29,8 +29,8 @@ void ButtonTextComponent::update(sf::Time deltaTime) {
 void ButtonTextComponent::render(sf::RenderWindow& window, sf::Transform transform) {
 //    sf::Vector2f buttonSize = mButtonSprite.getSize();
 //    std::cout << "button size: " << buttonSize.x << std::endl;
-//    window.draw(mButtonSprite, transform); 
-    window.draw(mButtonSprite/*, transform*/); 
+    window.draw(mButtonSprite, transform); 
+//    window.draw(mButtonSprite/*, transform*/); 
 //    window.draw(mText, transform); 
 }
 
