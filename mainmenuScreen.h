@@ -23,5 +23,5 @@ class MainMenuScreen {
         std::shared_ptr<Entity> mpPlayButton;
         sf::Font mFont;
         sf::Text mTitle; // TODO TextWrapper Component
-        std::shared_ptr<Entity> mpMouse;
+//        std::shared_ptr<Entity> mpMouse;
 };
