@@ -10,11 +10,6 @@ MainMenuScreen::MainMenuScreen() {
     std::shared_ptr<TransformComponent> pPlayButtonTransformComponent = std::make_shared<TransformComponent>();
     pPlayButtonTransformComponent->setPosition(sf::Vector2f(1000.f,400.f));
     mpPlayButton->addComponent("TransformComponent", pPlayButtonTransformComponent);
-
-    // Mouse
-//    mpMouse = std::make_shared<Entity>();
-//    std::shared_ptr<MouseComponent> pMouseComponent = std::make_shared<MouseComponent>();
-//    mpMouse->addComponent("MouseComponent", pMouseComponent);
 }
 
 MainMenuScreen::~MainMenuScreen() {
@@ -29,7 +24,7 @@ void MainMenuScreen::setPlayButton(std::shared_ptr<Entity> playButton) {
 }
 
 void MainMenuScreen::update(sf::Time& elapsed_time) {
-    mpPlayButton->update(elapsed_time);
+    mpPlayButton->update(window, elapsed_time);
 //    mpMouse->update(elapsed_time);
 }
 void MainMenuScreen::render(sf::RenderWindow& window) {

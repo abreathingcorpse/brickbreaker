@@ -12,7 +12,8 @@ void Entity::destroy() {
 
 }
 
-void Entity::update(sf::Time deltaTime) {
+void Entity::update(const sf::RenderWindow& window, const sf::Time& deltaTime) {
+//    mouseSingleton.update(mWindow);
     // For each component in mComponents, call update
     for(std::map<std::string, std::shared_ptr<Component>>::iterator it = mComponents.begin();
         it != mComponents.end(); it++) {

@@ -3,7 +3,6 @@
 #include "entity.h"
 #include "buttonTextComponent.h"
 #include "transformComponent.h"
-#include "mouseComponent.h"
 
 class MainMenuScreen {
     public:

@@ -1,21 +1,22 @@
 #pragma once
 #include "commonIncludes.h"
-#include "component.h"
 
-class MouseComponent : public Component {
+class MouseSingleton {
     public:
-        // Need to override this from the parent interface
-        void update(sf::Time deltaTime) override;
-        void render(sf::RenderWindow& window, sf::Transform transform) override;
+        static MouseSingleton& instance();
+//        MouseWrapper(const sf::RenderWindow& window);
 
         // Setter & getter
         const sf::Mouse& getMouse() const;
         void setMouse(sf::Mouse& mouse);
 
         // Other methods
+        void update(const sf::RenderWindow& window);
 //        const sf::Vector2f getPosition() const;
 //        void setPosition(const sf::Vector2f &position);
 
     private:
+        MouseSingleton() = default;
         sf::Mouse mMouse;
+//        sf::RenderWindow mWindow;
 };

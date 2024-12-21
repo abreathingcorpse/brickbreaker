@@ -3,18 +3,36 @@
 
 Game::Game() : mWindow(sf::VideoMode(1920,1080),"brickbreaker") {
     screenState = MAIN_MENU; 
+    
+//    MouseSingleton mouseSingleton = MouseSingleton::instance();
+
+    // Mouse
+//    mpMouseSingleton = std::make_shared<MouseSingleton>();
+//    mpMouseWrapper = std::make_shared<Entity>();
+//    std::shared_ptr<MouseComponent> pMouseComponent = std::make_shared<MouseComponent>();
+//    mpMouseWrapper->addComponent("MouseComponent", pMouseComponent);
 }
 
 void Game::processEvents() {
     sf::Event event;
 
     while (mWindow.pollEvent(event)) {
-        if (event.type == sf::Event::Closed)
+        if (event.type == sf::Event::Closed) {
             screenState = EXIT_GAME;
+        }
+
+//        if (event.type == sf::Event::MouseMoved) {
+//            mpMouseWrapper->update(mElapsedTime);
+////            mMouse.getPosition(mWindow);
+//        }
     }
 }
 
 void Game::update(sf::Time deltaTime) {
+
+//    mpMouseSingleton->update(mWindow);
+    mouseSingleton.update(mWindow);
+    
     switch (screenState) {
         case MAIN_MENU: {
             mScreenManager.getMainMenuScreen().update(mElapsedTime);

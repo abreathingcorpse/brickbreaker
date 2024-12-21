@@ -3,6 +3,7 @@
 #include "ball.h"
 #include "mainmenuScreen.h"
 #include "screenManager.h"
+#include "mouseSingleton.h"
 
 enum ScreenState {
     MAIN_MENU,
@@ -28,4 +29,8 @@ class Game {
         Ball mBall;
         ScreenState screenState;
         ScreenManager mScreenManager;
+//        sf::Mouse mMouse;
+//        std::shared_ptr<MouseSingleton> mpMouseSingleton;
+//        MouseSingleton mMouseSingleton;
+        MouseSingleton mouseSingleton = MouseSingleton::instance();
 };

@@ -2,6 +2,7 @@
 #include "commonIncludes.h"
 #include <map>
 #include "transformComponent.h"
+#include "mouseSingleton.h"
 
 // Forward declaration
 class Component;
@@ -15,7 +16,7 @@ class Entity {
     public:
         Entity();
 
-        virtual void update(sf::Time deltaTime);
+        virtual void update(const sf::RenderWindow& window, const sf::Time& deltaTime);
         virtual void render(sf::RenderWindow& window);
         void create();
         void destroy();
@@ -26,4 +27,5 @@ class Entity {
 
     private:
         std::map<std::string, std::shared_ptr<Component>> mComponents;
+        MouseSingleton mouseSingleton = MouseSingleton::instance();
 };
