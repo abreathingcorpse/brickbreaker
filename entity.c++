@@ -48,7 +48,6 @@ std::shared_ptr<Component> Entity::getComponent(const ComponentTypes& component_
 //    auto searchIterator = mComponents.find("TransformComponent");
     auto searchIterator = mComponents.find(component_type);
     
-
     if (searchIterator != mComponents.end()) {
         // For debugging
         if (component_type == ComponentTypes::TRANSFORM_COMPONENT) {
