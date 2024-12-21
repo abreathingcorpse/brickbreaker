@@ -28,7 +28,7 @@ void Entity::render(sf::RenderWindow& window) {
 //        component->render(window);
 //        if (it->first != "TransformComponent") {
         if (it->first != ComponentTypes::TRANSFORM_COMPONENT) {
-            std::shared_ptr<Component> transformAsComponent = this->getComponent(ComponentTypes::TRANSFORM_COMPONENT);
+            std::shared_ptr<Component> transformAsComponent = getComponent(ComponentTypes::TRANSFORM_COMPONENT);
             std::shared_ptr<TransformComponent> transformComponent = std::reinterpret_pointer_cast<TransformComponent>(transformAsComponent);
             sf::Transform transform = transformComponent->getTransform().getTransform();
             it->second->render(window, transform);

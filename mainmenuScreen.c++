@@ -4,15 +4,14 @@ MainMenuScreen::MainMenuScreen() {
     // Play Button
     mpPlayButton = std::make_shared<Entity>();
 
+    std::shared_ptr<TransformComponent> pPlayButtonTransformComponent = std::make_shared<TransformComponent>();
+    pPlayButtonTransformComponent->setPosition(sf::Vector2f(1000.f,400.f));
+    mpPlayButton->addComponent(ComponentTypes::TRANSFORM_COMPONENT, pPlayButtonTransformComponent);
+
     std::shared_ptr<ButtonTextComponent> pPlayButtonTextComponent = std::make_shared<ButtonTextComponent>("Play");
     mpPlayButton->addComponent(ComponentTypes::BUTTON_TEXT_COMPONENT, pPlayButtonTextComponent);
  //   mpPlayButton->addComponent("ButtonTextComponent", pPlayButtonTextComponent);
     
-    std::shared_ptr<TransformComponent> pPlayButtonTransformComponent = std::make_shared<TransformComponent>();
-    pPlayButtonTransformComponent->setPosition(sf::Vector2f(1000.f,400.f));
-    mpPlayButton->addComponent(ComponentTypes::TRANSFORM_COMPONENT, pPlayButtonTextComponent);
-//    mpPlayButton->addComponent("TransformComponent", pPlayButtonTransformComponent);
-
     // Mouse
     mpMouse = std::make_shared<Entity>();
     std::shared_ptr<MouseComponent> pMouseComponent = std::make_shared<MouseComponent>();
